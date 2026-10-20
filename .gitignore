@@ -1,0 +1,124 @@
+# ==========================================
+# Remodax - Git Ignore Configuration
+# Enforces Cybersecurity & Privacy Best Practices
+# ==========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.spec
+
+# PyInstaller / Executables
+*.manifest
+*.exe
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Environment Variables & Secrets (CRITICAL SECURITY)
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.cert
+*.pfx
+credentials.json
+secrets.json
+api_keys.json
+
+# Local Databases (Zero Leaks of Q&A History)
+*.db
+*.sqlite
+*.sqlite3
+/data/
+/storage/
+/local_storage/
+.remodax_storage/
+
+# Documents & Cache (Zero Leaks of Private User Documents)
+/documents_storage/
+/docs_cache/
+/temp_docs/
+*.pdf
+*.docx
+*.doc
+*.txt
+!requirements.txt
+!requirements*.txt
+!docs/*.md
+!README.md
+
+# Audio Buffers & Recordings (Zero Audio Persistence Guarantee)
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+audio_cache/
+temp_audio/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# IDE & Editor Specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.vs/
+*.suo
+*.user
+
+# OS Specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary & Log files (Sanitized, but never committed)
+*.log
+logs/
+temp/
+tmp/

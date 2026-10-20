@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "remodax"
+version = "0.1.0"
+description = "Asistente inteligente de escritorio para entrevistas y análisis documental con IA, privacidad y seguridad reforzada."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+authors = [
+    { name = "Remodax Architecture Team" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Operating System :: Microsoft :: Windows :: Windows 11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Multimedia :: Sound/Audio :: Capture/Recording"
+]
+dependencies = [
+    "PySide6>=6.6.0",
+    "keyring>=24.3.0",
+    "groq>=0.9.0",
+    "google-genai>=1.0.0",
+    "sounddevice>=0.4.6",
+    "PyAudioWPatch>=0.2.12.9",
+    "numpy>=1.24.0",
+    "faster-whisper>=1.0.0",
+    "PyMuPDF>=1.23.0",
+    "python-docx>=1.1.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-mock>=3.12.0",
+    "flake8>=7.0.0",
+    "black>=24.2.0",
+    "pyinstaller>=6.5.0"
+]
+
+[project.scripts]
+remodax = "main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+
+[tool.pyright]
+include = ["src", "tests", "scripts", "main.py"]
+extraPaths = ["."]

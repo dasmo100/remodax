@@ -1,0 +1,35 @@
+# ==============================================================================
+# Remodax - Project Dependencies
+# Desktop AI-assisted Interview & Document System for Windows
+# ==============================================================================
+
+# GUI Framework (Modern UI with Dark Theme)
+PySide6>=6.6.0
+
+# Security & Secrets Management (Windows Credential Manager)
+keyring>=24.3.0
+
+# AI LLM Providers (Fast Streaming & Context)
+groq>=0.9.0
+google-genai>=1.0.0
+
+# Audio Capture (WASAPI Loopback & Microphone)
+PyAudioWPatch>=0.2.12.9
+sounddevice>=0.4.6
+numpy>=1.24.0
+
+# Speech-to-Text / Audio Transcription (High performance Whisper engine)
+faster-whisper>=1.0.0
+
+# Document Processing (PDF and Word parsing for RAG)
+PyMuPDF>=1.23.0
+python-docx>=1.1.0
+
+# Packaging (Windows Executable generation)
+pyinstaller>=6.5.0
+
+# Development, Linting & Testing
+pytest>=8.0.0
+pytest-mock>=3.12.0
+flake8>=7.0.0
+black>=24.2.0
